@@ -6,11 +6,20 @@ that takes two arguments and returns their minimum.
  * 
  */
 function minimum(first, second) {
-    var result = Math.min(first, second);
-    console.log('Result of the minimum of two numbers', result);
-   return result;
+    /*
+        var result = Math.min(first, second);
+        console.log('Result of the minimum of two numbers', result);
+       return result;*/
+    var smallest = 0;
+    if (first < second) {
+        smallest = first;
+    } else {
+        smallest = second;
+    }
+
+    return "smallest is " + smallest;
 }
-minimum(93, 32);
+console.log(minimum(93, 32));
 
 
 /**
@@ -22,9 +31,9 @@ of a way to fix this?
  * 
  */
 
-function  isEven(number) {
-    if (number % 2 == 0){
-        return console.log('Boolean result from the the recursive function to print even numbers is ',true);
+function isEven(number) {
+    if (number % 2 == 0) {
+        return console.log('Boolean result from the the recursive function to print even numbers is ', true);
     }
     else {
         return console.log('Boolean result from the the recursive function to print even numbers is ', false);
@@ -49,13 +58,13 @@ function countBs(word) {
     var string = String('B');
     var count = 0;
     //var word = String('BoyboyB bB');
-    for (var i = 0; i < word.length; i++) {
+    for (var i = 0; i < word.length; i++ ) {
         if (word[i] == string) {
-            count += 1
+            count += 1;
         }
 
-    } 
-     console.log(count);
+    }
+    console.log(count);
 }
 countBs(word);
 
@@ -64,12 +73,12 @@ var word1 = String('Bad Boy Bob');
 var string = String('B');
 function countBs1(word, compare) {
     var count = 0;
-    for (var i = 0; i < word.length; i++) {
+    for (var i = 0; i < word.length; i++ ) {
         if (word[i] == compare) {
-            count += 1
+            count += 1;
         }
 
     }
     console.log(count);
 }
-countBs1(word1,string);
+countBs1(word1, string); 
