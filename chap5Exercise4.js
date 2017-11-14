@@ -5,9 +5,20 @@ function every(array, predicate) {
   }
   return true;
 }
+function everyB(array, predecessor) {
+    for (var j = 0; j < array.length; j++) {
+        if (!predecessor(array[j])) {
+            return false;
+        }
+        return true;
+        
+    }
+}
+console.log(everyB([NaN,1,2,3,4], isNaN));
 
 function some(array, predicate) {
   for (var i = 0; i < array.length; i++) {
+      //array[0] = NaN;
     if (predicate(array[i]))
       return true;
   }
