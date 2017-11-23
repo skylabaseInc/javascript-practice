@@ -13,15 +13,14 @@ else
 function reliableMultiply(firstVariable, secondVariable) {
 for (; ; ) {
 try {
-    return primitiveMultiply(firstVariable, secondVariable); 
+return primitiveMultiply(firstVariable, secondVariable); 
 }catch (error) {
 if ( ! (error instanceof MultiplicatorUnitFailure)) {
 throw error; 
 }
 }
 }
-// Your code here.
-    var reliable = primitiveMultiply(firstVariable, secondVariable); 
+var reliable = primitiveMultiply(firstVariable, secondVariable); 
 return reliable; 
 }
 

@@ -34,4 +34,5 @@ console.log("Error raised:", e);
 }
 
 console.log(box.locked); 
+//console.log(box.unlock());
 // → true
