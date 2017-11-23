@@ -1,0 +1,16 @@
+var word = 'car and cat';
+console.log(word.match("cat|car"));
+var word = 'pop and prop';
+console.log(word.match("pop|prop"));
+var word = 'ferret, ferry, and ferrari';
+console.log(word.match("ferret|ferry|ferrari"));
+var word = 'precious';
+console.log(word.match("ious"));
+var word = ' ., , and ;';
+console.log(word.match(" .| ,| ;"));
+var word = 'ferr, ferry, and ferrari';
+var regexp = /\w{6,}/;
+console.log(regexp.test(word));
+var word = 'fErr, frry, and frrari';
+var regexp = /[^\We]+/;
+console.log(regexp.test(word));
